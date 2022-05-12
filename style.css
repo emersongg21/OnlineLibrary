@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500;1,600;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,200;1,500&family=Roboto+Slab:wght@300;400;500;600;700;800&family=Special+Elite&display=swap');
+
+:root
+{
+    --green: #27ae60;
+    --dark-color: #219150;
+    --black: #444;
+    --light-color: #666;
+    --border: .1rem solid rgba(0,0,0,.1);
+    --border-hover: .1rem solid rgba(0,0,0,.1);
+    --box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+body
+{
+    height: 300rem;
+}
+
+*
+{
+    font-family: 'Poppins', cursive;
+    /* background-color: #121212; */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    transition: width none ;
+}
+
+html
+{
+    font-size: 62.5%;
+    overflow-x: hiden;
+    scroll-padding-top: 5rem;
+    scroll-behavior: smooth;
+
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+    border-radius: 5px;
+    background: none;
+}
+
+::-webkit-scrollbar:hover{
+    width: 10px;
+}
+
+
+::-webkit-scrollbar-thumb{
+    background:#af0000;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: #ff0000;
+}
+
+.btn{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #cf0000;
+    padding: 14px 40px;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    outline: none;
+    font-weight: 500px;
+}
+
+
+.btn:hover
+{
+    border-color: #fc0000;
+    background-color: #fc0000;
+    cursor: pointer;
+}
+
+.header .header-1
+{
+    background: #242424;
+    padding: 1.5rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .header-1 .logo
+{
+    /* Todo o logo da página */
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: #e20000;
+
+}
+
+.header .header-1 .logo:hover
+{
+    /* Todo o logo da página */
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: #ff0000;
+
+}
+
+.header .header-1 .logo .i
+{
+    /* Desenho do livro na logo */
+    color: #af0000;
+}
+
+.header .header-1 .search-form
+{
+    /* form de pesquisa e todos os seus itens */
+    width: 50rem;
+    height: 4rem;
+    border: var(--border);
+    overflow: hidden;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    border-radius: 24px;
+}
+
+.header .header-1 .search-form input
+{
+    /* Apenas a entrada de texto do form */
+    font-size: 1.6rem;
+    padding:0 1.2rem;
+    height:100%;
+    width:100%;
+    text-transform: none;
+    color:var(--black);
+    /* caret-color: #ff0000; */
+    /* text-align: center;     */
+}
+
+.header .header-1 .search-form label
+{
+    /* Icone dentro da caixa de pesquisa */
+    font-size: 2.5rem;
+    padding-right: 1.5rem;
+    color:#af0000;
+    cursor: pointer;
+}
+
+.header .header-1 .search-form label:hover
+{
+    color:#ff0000;
+}
+
+.header .header-1 .icons div,
+.header .header-1 .icons a
+{
+    /* Icones de pesquisa e de perfil */
+    font-size: 2.5rem;
+    margin-left: 1.5rem;
+    color: #af0000;
+    cursor: pointer;
+}
+
+
+.header .header-1 .icons div:hover,
+.header .header-1 .icons a:hover
+{
+    /* Icones de pesquisa e de perfil */
+    font-size: 2.5rem;
+    margin-left: 1.5rem;
+    color:#ff0000;
+    cursor: pointer;
+}
+
+#search-btn
+{
+    /* Botão de pesquisa fora da caixa de entrada de texto  sendo ocultada */
+    display: none;
+}
+
+.header .header-2
+{
+    /* Mudando a cor do header 2 (navbar) */
+    background: #242424;
+}
+.header .header-2 .navbar
+{
+    /* alinhado os itens no centro */
+    text-align: center;
+}
+
+.header .header-2 .navbar a
+{
+    /* Mudando as cores e tamanho dos links do navbar */
+    color:#cf0000;
+    display: inline-block;
+    padding:1.2rem;
+    font-size: 1.7rem;
+}
+
+.header .header-2 .navbar a:hover
+{
+    color:#ff0000;
+    background-color: #ffffff;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.header .header-2.active
+{
+    /* Deixando o .header-2 fixo no topo */
+    /* o '.active' é definido no JS*/
+    position:fixed;
+    top:0; left:0; right:0;
+    z-index: 1000;
+}
+
+.bottom-navbar
+{
+    /* Icones navbar em dispositivos mobile */
+    text-align: center;
+    background: #242424;
+    position: fixed;
+    bottom:0; left:0; right:0;
+    z-index: 1000;
+    display: none;
+}
+
+.bottom-navbar a
+{
+    /* Cor e tamanhos dos icones do navbar mobile */
+    font-size: 2.5rem;
+    padding:2rem;
+    color:#fc0000;
+}
+
+.bottom-navbar a:hover
+{
+    /* Cor e tamanhos dos icones do navbar mobile quando presionados*/
+    background: #fff;
+    border-radius: 0px 0px 15px 15px;
+    color:#fc0000;
+}
+
+
+@media (max-width:991px)
+{
+    html
+    {
+        font-size: 55%;
+    }
+
+    .header .header-1
+    {
+        padding:2rem;
+    }
+}
+
+
+@media (max-width:768px)
+{
+
+    html
+    {
+        scroll-padding-top: 0;
+    }
+    body
+    {
+        padding-bottom: 6rem;
+    }
+    /* Em determinado tamanho de tela (mobile) o 'navbar' sai do header e fica abaixo dele*/
+    .header .header-2
+    {
+        display:none;
+    }
+
+    #search-btn
+    /* O botão de pesquisa do header  */
+    {
+        display: inline-block;
+    }
+
+    .header .header-1
+    {
+        box-shadow: var(--box-shadow);
+        position: relative;
+    }
+
+    .header .header-1 .search-form
+    {
+        /* O form ficará escondido até que o botão do header for pressionado (JS) */
+        position: absolute;
+        top: -115%; right:2rem;
+        width: 90%;
+        box-shadow: var(--box-shadow);
+    }
+
+    .header .header-1 .search-form.active
+    {
+        /* Quando receber a caracteristica 'active' do JS, eles aparecerão */
+        top:115%;
+    }
+
+    .bottom-navbar
+    {
+        /* Ficará escondido até a janela atingir dimensões mobile */
+        display: block;
+    }
+}
+
+
+@media (max-width:450px)
+{
+    html
+    {
+        font-size: 50%;
+    }
+
+    .header .header-1
+    {
+        padding:2rem;
+    }
+}
